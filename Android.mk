@@ -19,6 +19,66 @@ LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_DEVICE),oce)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := libgpustats
+LOCAL_MODULE_OWNER := htc
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libgpustats.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libgpustats.so
+LOCAL_MULTILIB := both
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := AdaptiveSound
+LOCAL_MODULE_OWNER := htc
+LOCAL_SRC_FILES := proprietary/priv-app/AdaptiveSound/AdaptiveSound.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := OceCamera
+LOCAL_MODULE_OWNER := htc
+LOCAL_SRC_FILES := proprietary/priv-app/OceCamera/OceCamera.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := SecondDisplay
+LOCAL_MODULE_OWNER := htc
+LOCAL_SRC_FILES := proprietary/priv-app/SecondDisplay/SecondDisplay.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := TimeService
+LOCAL_MODULE_OWNER := htc
+LOCAL_SRC_FILES := proprietary/vendor/app/TimeService/TimeService.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := crashdump
 LOCAL_MODULE_OWNER := htc
 LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT_SBIN)
